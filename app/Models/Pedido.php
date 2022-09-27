@@ -9,6 +9,10 @@ class Pedido extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'cliente_id'
+    ];
+
     public function itens()
     {
         return $this->belongsToMany(
